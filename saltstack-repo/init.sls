@@ -48,7 +48,7 @@ install_pubkey_saltstack-repo:
 
 
 saltstack-repo_file:
-  file.managed
+  file.managed:
     - name: /etc/yum.repos.d/saltstack.repo
     - source: {{ salt['pillar.get']('saltstack-repo:repofile', repo.file) }}
     - source_hash:  {{ salt['pillar.get']('saltstack-repo:repofile_hash', repo.file_hash) }}
