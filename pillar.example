@@ -1,0 +1,11 @@
+saltstack-repo:
+  # URL to the SaltStack .repo file to install and sha256 hash for it
+  repofile: default varies with OS; see epel/init.sls
+  repofile_hash: default varies with OS; see epel/init.sls
+
+  # URL to the SaltStack GPG key
+  pubkey: default varies with OS; see epel/init.sls
+  pubkey_hash: default varies with OS; see epel/init.sls
+
+  # Disable repo so requires the --enablerepo flag to use
+  disabled: false
