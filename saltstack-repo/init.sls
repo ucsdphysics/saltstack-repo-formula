@@ -1,7 +1,7 @@
 # Completely ignore non-RHEL based systems
 {% if grains['os_family'] == 'RedHat' %}
 
-# A lookup table for SaltStack GPG keys & RPM URLs for various RedHat releases
+# A lookup table for SaltStack GPG keys & repo file URLs for various RedHat releases
 {% if grains['osmajorrelease'][0] == '5' %}
   {% set repo = {
     'key': 'https://repo.saltstack.com/yum/redhat/5/x86_64/latest/SALTSTACK-EL5-GPG-KEY.pub',
